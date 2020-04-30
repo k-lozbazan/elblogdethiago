@@ -14,6 +14,7 @@ html {
     --font-titulo: 'Oswald', sans-serif;
     --font-subtitutlo: 'Roboto', sans-serif;
     --font-parrafo: 'Open Sans', sans-serif;
+    --color-btn: #262626;
     /*font-family: 'Oswald', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-family: 'Open Sans', sans-serif;*/
@@ -37,10 +38,8 @@ ul {
 }
 
 .contenedor {
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    padding: 10px;
 }
 
 
@@ -51,13 +50,19 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
-    padding: 20px 0;
+    width: 100%;
+    height: 90px;
+    background: #E1DE80;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    /* opacity: .8; */
+    max-height: 600px;
 }
 
 .nav-logo {
     width: 450px;
-    margin: 20px 0;
+    padding: 10px 0;
 }
 
 
@@ -69,19 +74,35 @@ ul {
 
 .nav-main ul li {
     padding: 10px;
+    text-transform: capitalize;
 }
 
 .nav-main ul li a {
-    padding: 2px;
+    font-size: 20px;
+    color: #262626;
 }
 
 .nav-main ul li a:hover {
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #262626;
+    background: #262626;
+    color: #fff;
+    padding: 10px 10px;
+    border-radius: 4px;
 }
 
 .nav-main ul.nav-menu {
     flex: 1;
     margin-left: 20px;
+}
+
+.nav-menu-right {
+    position: relative;
+}
+
+.nav-menu-right a {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
 }
 
 
@@ -90,25 +111,33 @@ ul {
 .acerca-de-mi {
     width: 100%;
     height: 550px;
-    background: url(/img/background-1.jpg) no-repeat center center/cover;
-    border-radius: 10px;
-    margin: 10px 10px;
+    background: url(/img/yayo-17.jpg) no-repeat center center/cover;
     padding-bottom: 30px;
+    margin-top: 90px;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: flex-end;
 }
 
 .acerca-de-mi h2 {
-    font-size: 50px;
-    font-family: var(--font-titulo);
+    font-size: 70px;
+    font-weight: 200;
+    font-family: var(--font-subtitulo);
+    color: #fff;
+    text-align: left;
+    padding: 0 20px;
+    width: 100%;
 }
 
 .acerca-de-mi p {
-    font-family: var(--font-subtitutlo);
-    padding: 0 20px;
+    font-family: var(--font-parrafo);
+    font-weight: 300;
+    padding: 0 0 20px 20px;
+    color: #fff;
+    text-align: left;
+    justify-content: left;
+    width: 800px;
 }
 
 .btn {
@@ -125,14 +154,40 @@ ul {
     margin: 10px 0;
 }
 
+.btn-acerca-de-mi {
+    cursor: pointer;
+    margin: 0 20px;
+    border: 0;
+    font-weight: 300;
+    padding: 10px 20px;
+    background: #262626;
+    color: #fff;
+    font-size: 18px;
+    border: 1px solid #fff;
+    width: 120px;
+}
+
 .btn:hover {
     opacity: .7;
 }
 
-.acerca-de-mi h2,
+.btn-acerca-de-mi:hover {
+    opacity: .7;
+}
+
+
+/* .acerca-de-mi h2,
 .acerca-de-mi p {
     margin-bottom: 10px;
     text-align: left;
+} */
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: .8;
 }
 
 
@@ -194,4 +249,114 @@ ul {
 .about-cards .cards img {
     width: 100%;
     height: 320px;
+}
+
+.cards {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+}
+
+.cards a {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+
+/*Parents*/
+
+
+/* .text-parents {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+    font-weight: 100;
+    padding: 20px;
+}
+
+.parents {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0;
+}
+
+.parents .card-father {
+    width: 380px;
+    height: 420px;
+    background: url(/img/carlos.jpg) no-repeat center center/cover;
+    margin: 0 50px;
+}
+
+.parents .card-mother {
+    width: 380px;
+    height: 420px;
+    background: url(/img/heydi-2.jpg) no-repeat center center/cover;
+    justify-content: space-around;
+}
+
+.parents p,
+.parents h2,
+.parents a {
+    text-align: justify;
+}
+
+.parents a:hover {
+    background: #333;
+    color: #fff;
+    opacity: .8;
+    border: 1px solid #fff; 
+}*/
+
+
+/*Mis Padres*/
+
+.parents {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.parents .card-father,
+.parents .card-mother {
+    position: relative;
+    overflow: hidden;
+}
+
+.parents .card-father img,
+.parents .card-mother img {
+    width: 300px;
+    height: 450%;
+    /* height: 100%; */
+}
+
+.detalles {
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    width: 50%;
+    height: 50%;
+    left: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
+    z-index: 700;
+}
+
+.parents .card-father:before,
+.parents .card-mother:before {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 300px;
+    height: 450px;
+    background: linear-gradient(0deg, #000 50%, transparent);
+    transition: 0.5s;
+    z-index: 100;
 }
