@@ -9,6 +9,19 @@
     <link rel="icon" href="img/yayo-4.jpg" sizes="32x32" type="image/ipg">
     <title>El Blog de Thiago</title>
 
+    <!--JqueryCDN-->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+
+    <script type="text/javascript">
+        $(window).on('scroll', function() {
+            if ($(window).scrollTop()) {
+                $('nav').addClass('black');
+            } else {
+                $('nav').removeClass('black');
+            }
+        })
+    </script>
     <!--Fontawesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <!--Estilos CSS-->
@@ -26,33 +39,11 @@
         <nav class="nav-main">
             <img src="img/logo-thiago.png" class="nav-logo" alt="Logotipo del Blog de Thiago">
             <ul class="nav-menu">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="#about">Sobre Mi</a>
-                    <!-- <ul>
-                        <li><a href="pasado.html">Pasado</a></li>
-                        <li><a href="presente.html">Presente</a></li>
-                        <li><a href="futuro.html">Futuro</a></li>
-                    </ul> -->
-                </li>
-                <li><a href="#parents">Mis Padres</a>
-                    <!-- <ul>
-                        <li><a href="carlosbazan.html">Carlos Bazán</a></li>
-                        <li><a href="heydiadvincula.html">Heydi Advíncula</a></li>
-                        <li><a href="misabuelos.html">Mis Abuelos</a></li>
-                    </ul> -->
-                </li>
-                <li><a href="#activity">Actividades</a>
-                    <!-- <ul>
-                        <li><a href="paseos.html">Paseos</a></li>
-                        <li><a href="actuaciones.html">Actuaciones</a></li>
-                        <!-- <li><a href="#">Mis Abuelos</a></li> -->
-                </li>
-                <li><a href="#galery">Galería</a></li>
-            </ul>
-            <ul class="nav-menu-right">
-                <li>
-                    <a href="#"><i class="fas fa-search"></i></a>
-                </li>
+                <li><a href="/" class="active">Inicio</a></li>
+                <li><a href="#about">Sobre Mi</a></li>
+                <li><a href="#parents">Mis Padres</a></li>
+                <li><a href="#activity">Actividades</a></li>
+                <li><a href="galeria.html">Galería</a></li>
             </ul>
         </nav>
         <!--Acerca de mi-->
@@ -110,8 +101,8 @@
                         <figcaption class="trasera">
                             <h2 class="titulo"><i class="fa fa-address-card" aria-hidden="true"></i> Carlos Alberto Bazán</h2>
                             <hr>
-                            <p>Mi papi es una persona que trabaja arduamente para superar todos los obstáculos que se le presentan, como digo yo: MI PAPI TODO LO PUEDE". Le gusta mucho hacer deporte, en sus tiemposmozos practicaba voleyball, llegó a jugar
-                                en la Liga Masculina de Lima. Además también practica futbol, hicha declarado del Club Sporting Cristal, club al que soy hincha también. Mi papá me ama muchísimo y me lo demuestra cada día.</p>
+                            <p>Mi papi es una persona que trabaja arduamente para superar todos los obstáculos que se le presentan, pues como digo yo: "MI PAPI TODO LO PUEDE". Le gusta mucho hacer deporte. Es hincha declarado del Club Sporting Cristal, club
+                                al que soy hincha también. Mi papá me ama muchísimo y me lo demuestra cada día.</p>
                         </figcaption>
                     </figure>
                     <figure>
