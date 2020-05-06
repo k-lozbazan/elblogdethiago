@@ -294,7 +294,7 @@ nav ul li a:hover {
     bottom: 10px;
 }
 
-.text-parents {
+.texto-sombra {
     text-align: center;
     font-size: 40px;
     margin: 50px 20px;
@@ -302,55 +302,6 @@ nav ul li a:hover {
     padding: 20px;
     text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC, 2px 2px 4px rgba(206, 89, 55, 0.9);
 }
-
-
-/*Parents*/
-
-
-/* .text-parents {
-    text-align: center;
-    font-size: 40px;
-    margin-top: 100px;
-    font-weight: 100;
-    padding: 20px;
-}
-
-.parents {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 80%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0;
-}
-
-.parents .card-father {
-    width: 380px;
-    height: 420px;
-    background: url(/img/carlos.jpg) no-repeat center center/cover;
-    margin: 0 50px;
-}
-
-.parents .card-mother {
-    width: 380px;
-    height: 420px;
-    background: url(/img/heydi-2.jpg) no-repeat center center/cover;
-    justify-content: space-around;
-}
-
-.parents p,
-.parents h2,
-.parents a {
-    text-align: justify;
-}
-
-.parents a:hover {
-    background: #333;
-    color: #fff;
-    opacity: .8;
-    border: 1px solid #fff; 
-}*/
 
 
 /*Mis Padres*/
@@ -521,4 +472,64 @@ figure .trasera p {
     .contenedor-tarjeta:hover figure {
         transform: perspective(600px) rotateY(0deg);
     }
+}
+
+
+/*Footer*/
+
+footer {
+    margin: 100px 0 0 0;
+}
+
+.contenedor-footer {
+    font-family: var(--opensans);
+    color: #262626;
+    background: #e1de80;
+    color: var(--color-pattern);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 50px;
+    grid-template-areas: "footer-left-1 footer-center-1 footer-right-1" "footer-left-2 footer-center-2 footer-right-2";
+    justify-items: center;
+    align-items: auto;
+}
+
+.contenedor-footer .menu-footer {
+    /* width: 400px; */
+}
+
+.contenedor-footer .menu-footer h2,
+.contenedor-footer .redes-sociales h2,
+.contenedor-footer .links-interes h2 {
+    font-family: var(--oswald);
+    font-size: 16px;
+    color: #262626;
+}
+
+.contenedor-footer .menu-footer a,
+.contenedor-footer .links-interes a {
+    display: block;
+    font-size: 14px;
+    color: #53696f;
+}
+
+.contenedor-footer .redes-sociales {
+    /* justify-self: stretch; */
+}
+
+.contenedor-footer .redes-sociales a {
+    font-size: 40px;
+    color: #53696f;
+}
+
+.contenedor-footer .links-interes {
+    /* width: 400px; */
+}
+
+.contenedor-footer .copyright {
+    margin: 10px 10px;
+    text-align: center;
+    grid-column-start: footer-left-2;
+    grid-column-end: footer-right-2;
+    grid-column: 1/-1;
 }
